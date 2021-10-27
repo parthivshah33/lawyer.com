@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # app live hoy to key ne upload kari devani ane localhost hoy to aam rakhvani.
-# SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = 'django-insecure-cu_#gvubs--)6_&vumi!gs#yfmi84@@0isp%5ubwr&=#b#64ie'
+SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = 'django-insecure-cu_#gvubs--)6_&vumi!gs#yfmi84@@0isp%5ubwr&=#b#64ie'
 
 
 
@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-cu_#gvubs--)6_&vumi!gs#yfmi84@@0isp%5ubwr&=#b#64ie
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://apnalawyer.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['apnalawyer.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -92,11 +92,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-
-WHITENOISE_USE_FINDERS = True
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
